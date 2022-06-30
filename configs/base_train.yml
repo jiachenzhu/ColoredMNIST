@@ -1,0 +1,21 @@
+n_restarts: 10
+hidden_dim: 390
+expander_factor: null
+
+warmup_epoch: null
+pretrain_epoch: null
+pretrain_batch_size: null
+encoder_start_lr: null
+
+dropout_rate_1: null
+dropout_rate_2: null
+
+sim_coeff: null
+std_coeff: null
+cov_coeff: null
+
+finetune_lr: 0.0004898536566546834
+finetune_steps: 501
+l2_regularizer_weight: 0.00110794568
+penalty_weight: 91257.18613115903
+penalty_anneal_iters: 190

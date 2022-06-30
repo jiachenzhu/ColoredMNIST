@@ -1,0 +1,11 @@
+comment: CM_dropout_117
+cov_coeff: 1.0
+dropout_rate_1: 0.75
+dropout_rate_2: 0.75
+encoder_start_lr: 0.005
+expander_factor: 1
+pretrain_batch_size: 200
+pretrain_epoch: 20
+sim_coeff: 25.0
+std_coeff: 25.0
+warmup_epoch: 4
