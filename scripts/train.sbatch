@@ -17,4 +17,4 @@
 eval "$(conda shell.bash hook)"
 conda activate
 
-python train.py configs/base_train.yml configs/experiment_$SLURM_ARRAY_TASK_ID.yml
+python main.py configs/base_train.yml configs/experiment_$SLURM_ARRAY_TASK_ID.yml
