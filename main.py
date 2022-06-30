@@ -175,7 +175,7 @@ for restart in range(config.n_restarts):
             if step % 100 == 0:
                 print(step, loss.item())
     
-    mlp = MLP().cuda()
+    mlp = MLP(config.hidden_dim).cuda()
     print(mlp.load_state_dict(encoder.state_dict(), strict=False))
     
     def mean_nll(logits, y):
