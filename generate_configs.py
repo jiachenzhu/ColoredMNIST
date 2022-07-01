@@ -1,7 +1,7 @@
 import os
 import yaml
 
-i = 1
+i = 649
 for expander_factor in [1, 2, 4]:
     for pretrain_epoch, warmup_epoch in [
         (10, 2),
@@ -17,8 +17,8 @@ for expander_factor in [1, 2, 4]:
                     (0.5, 1.0),
                 ]:
                     for sim_coeff, std_coeff, cov_coeff in [
-                        (25.0, 25.0, 1.0),
-                        (12.5, 12.5, 1.0),
+                        (25.0 / 4, 25.0 / 4, 1.0),
+                        # (12.5, 12.5, 1.0),
                     ]:
                         comment = f"CM_dropout_{i}"
                         comment = comment.replace(" ", "").replace("[", "").replace("]", "").replace(",", "_").replace("'", "")
