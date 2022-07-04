@@ -160,8 +160,8 @@ for restart in range(config.n_restarts):
             current_start = current_start + config.pretrain_batch_size
 
             original_x = torch.cat([image_env0, image_env1], dim=0)
-            x1 = F.dropout(original_x.view(-1, 2 * 14 * 14), p=config.dropout_rate_1)
-            x2 = F.dropout(original_x.view(-1, 2 * 14 * 14), p=config.dropout_rate_2)
+            x1 = F.dropout2d(original_x, p=config.dropout_rate_1).view(-1, 2 * 14 * 14)
+            x2 = F.dropout2d(original_x, p=config.dropout_rate_2).view(-1, 2 * 14 * 14)
 
             p1 = encoder(x1)
             p2 = encoder(x2)
